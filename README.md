@@ -30,3 +30,8 @@ This script was tested to ensure that the code is functional. I used two spare U
 ### rsync-resource-limited.sh
 This particular script is slightly different to the second one. Here, it is not going to offer prompts but is instead focused towards you updating the script with your source, destination, cores and ram. Based on your machine. By default it is recommended to keep the Cores at default to "0-4". You can go with higher if you are using a core i8 or higher, but for those who are using Core i7 or Core i5 machines (especially those in the 4th or 5th Generation) then it is recommended to keep to 0-4. RAM limit can be increased or decreased depending on how quickly you want your data to be tranferred via rsync. The source and destination are fairly straightforward - where is your data, and where are you copying it to.
 More accurately where is it being synced into, whilst maintaining its metadata and all key features. And both sides are kept available when required.
+### filelistingscript.sh
+This is a fully built script from the ground up meant to essentially provide feedback to the user with one purpose:
+It combs through your specific folder, and based on the threshold (in GB), it first lists out the folders (up to a maximum depth of 3) followed by listing individuals files by file size and file name, in GB up to two decimal places.
+The script has a section which can be edited to suit the specific file types of the user. In this example case it was the extensions 7z, ISO, tar.gz, deb, and zip files. But it can be expanded to suit whatever is required by the user for the purpose of their working.
+This is a listing script, but it helps in identifying the heaviest files in your computer from the ground up. And building up from there.
